@@ -34,7 +34,7 @@ public class MissionDAO {
     }
     
     public List<Mission> getMissionByMissionName(String missionname) {
-    	Query query=em.createQuery("SELECT w FROM Mission w where name like '" +missionname+ "'");
+    	Query query=em.createQuery("SELECT w FROM Mission w where w.name like '" +missionname+ "'");
         return query.getResultList();
     }
  
